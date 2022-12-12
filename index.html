@@ -309,7 +309,9 @@
                     return createDefaultEngine();
                 }
             }
-
+            
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
             window.engine = await asyncEngineCreation();
             if (!engine) throw 'engine should not be null.';
             window.scene = createScene();
